@@ -12,15 +12,71 @@ body {
     grid-template-rows: .7fr 3.3fr;
 }
 
+/*--- Related to styling the header ---*/
 header {
-    background-color: aqua;
     grid-area: 1/2/2/3;
+    display: flex;
+    flex-direction: column;
+    padding: 2vh 4vh;
+    padding-right: 5%;
+    gap: 3vh;
+    box-shadow: 0 1px 6px 1px #a6a6a6;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-group {
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+}
+
+#rectangle {
+    width: 300px;
+    height: 2em;
+    border-radius: 10%;
+    background-color: #abadb0;
+}
+#upper input {
+    width: 40vw;
+    height: 2em;
+    border-radius: 25px;
+    border-style: none;
+    background-color: #abadb0;
+}
+
+#lower  #logo {
+    height: 65px;
+    width: 65px;
+}
+
+#lower button  {
+    border-radius: 25px;
+    border-style: none;
+    padding: 1em 3em;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#welcome-msg > h2,h3 {
+    margin:0;
+    padding:0;
+}
+
+#welcome-msg  {
+    display: flex;
+    flex-direction: column;
+    gap: .8em;
 }
 
 /*--- Related to styling the navbar ---*/
 nav {
     padding-top: 10%;
-    background-color: orange;
+    background-color: #5c97f7;
     grid-area: 1/1/3/2;
     display: flex;
     flex-direction: column;
@@ -49,10 +105,72 @@ nav {
     border-radius: 50%;
 }
 
+/* ---Related to styling the main section ---*/
 
 section {
-    background-color: pink;
+    background-color: #bbc0c7;
     grid-area: 2/2/3/3;
+    display: flex;
 }
 
+#project-container {
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .2fr .8fr .8fr .8fr;
+    gap: 2vh;
+    padding: 1vh 1vw 5vh;
+}
 
+#project-container > h2 {
+    grid-area: 1/1/2/ span 2;
+    align-self: flex-end;
+    margin-bottom: 0;
+}
+
+#project-container .project-card {
+    background-color: white;
+    padding: 5%;
+    display:flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10px;
+    border-left: 10px solid black;
+    box-shadow: 0 2px 5px 1px #a6a6a6;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10%;
+    gap: 1vw;
+}
+
+section > aside {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding-top: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    gap: 5%;
+    margin-bottom: 3%;
+}
+.announcements .project-card {
+    border-radius: 10px;
+    background-color: white;
+}
+
+aside h2 {
+    margin-bottom: 4%;
+    padding-bottom: 0;
+}
+
+.announcement {
+    padding: 10%;
+}
+
+.announcement p, h4 {
+    margin: 0;
+    padding: 0;
+}
